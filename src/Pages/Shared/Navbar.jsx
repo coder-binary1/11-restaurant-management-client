@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
+import logo from "../../assets/logo.png";
 
 const Navbar = () => {
   const { user, logOutUser } = useAuth();
@@ -36,9 +37,9 @@ const Navbar = () => {
     logOutUser();
   };
   return (
-    <div className="navbar bg-base-100 shadow-sm">
+    <div className="navbar max-w-7xl mx-auto absolute left-0 right-0 z-10  ">
       <div className="navbar-start">
-        <div className="dropdown">
+        <div className="dropdown text-white">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -58,15 +59,22 @@ const Navbar = () => {
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow text-black"
           >
             {links}
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl">daisyUI</a>
+        <Link to="/">
+          <button className=" btn btn-ghost ">
+            <img className="w-8" src={logo} alt="logo" />
+            <h2 className="text-3xl font-bold font-dancing-script text-white">
+              Grillix
+            </h2>
+          </button>
+        </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">{links}</ul>
+        <ul className="menu menu-horizontal px-1 text-white">{links}</ul>
       </div>
       <div className="navbar-end">
         {user ? (

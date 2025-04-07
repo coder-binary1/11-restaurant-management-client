@@ -5,7 +5,7 @@ import { ToastContainer } from "react-toastify";
 
 const MainLayout = () => {
   return (
-    <div className="flex flex-col h-screen max-w-7xl mx-auto font-poppins">
+    <div className="flex flex-col h-screen mx-auto font-poppins">
       <Navbar></Navbar>
       <div className="grow">
         <Outlet></Outlet>
