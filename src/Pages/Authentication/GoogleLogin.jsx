@@ -1,11 +1,29 @@
+import { Slide, toast } from "react-toastify";
 import useAuth from "../../hooks/useAuth";
+import { useNavigate } from "react-router-dom";
 
 const GoogleLogin = () => {
   const { signInWithGoogle } = useAuth();
+  const navigate = useNavigate();
 
   const handleGoogleLogin = () => {
     signInWithGoogle()
-      .then((res) => console.log(res.user))
+      .then((res) => {
+        if (res.user) {
+          toast.success("Login Successful", {
+            position: "top-center",
+            autoClose: 2000,
+            hideProgressBar: true,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+            transition: Slide,
+          });
+          navigate("/");
+        }
+      })
       .catch((err) => console.log(err.message));
   };
   return (

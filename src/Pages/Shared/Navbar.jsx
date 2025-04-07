@@ -18,6 +18,20 @@ const Navbar = () => {
     </>
   );
 
+  const profileLinks = (
+    <>
+      <li>
+        <Link to="/myFood">My Foods</Link>
+      </li>
+      <li>
+        <Link to="/addFood">Add Food</Link>
+      </li>
+      <li>
+        <Link to="/myOrder">My Order</Link>
+      </li>
+    </>
+  );
+
   const handleLogOut = () => {
     logOutUser();
   };
@@ -56,12 +70,28 @@ const Navbar = () => {
       </div>
       <div className="navbar-end">
         {user ? (
-          <button
-            onClick={handleLogOut}
-            className="btn btn-error btn-sm text-white"
-          >
-            Logout
-          </button>
+          <div className="dropdown ">
+            <div
+              tabIndex={0}
+              className="btn bg-transparent border-0 shadow-none"
+            >
+              <img className="rounded-full w-10" src={user.photoURL} alt="" />
+            </div>
+            <ul
+              tabIndex={0}
+              className="menu dropdown-content bg-base-100 rounded-box z-1 shadow-sm  right-0 w-36"
+            >
+              {profileLinks}
+              <li>
+                <button
+                  onClick={handleLogOut}
+                  className="btn btn-sm btn-error text-white mt-4"
+                >
+                  Logout
+                </button>
+              </li>
+            </ul>
+          </div>
         ) : (
           <>
             <Link to="/register">
