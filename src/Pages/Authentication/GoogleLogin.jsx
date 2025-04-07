@@ -11,7 +11,11 @@ const GoogleLogin = () => {
   return (
     <div className="mt-3">
       <div className="divider">OR</div>
-      <button onClick={handleGoogleLogin} className="btn btn-block">
+      <button
+        type="button"
+        onClick={handleGoogleLogin}
+        className="btn btn-block"
+      >
         Login with Google
       </button>
     </div>
