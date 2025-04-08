@@ -1,0 +1,93 @@
+[
+  {
+    "customer_name": "Samiul Karim",
+    "customer_profession": "Software Developer",
+    "customer_image": "https://i.ibb.co.com/FLFLZqqm/Mark-Miller.jpg",
+    "customer_review": "I’ve tried many carbonaras, but this one was exceptional. The sauce was creamy without being too heavy, and the pancetta added a nice crunch. Definitely one of the best pasta dishes I’ve had!",
+    "star_rating": 5
+  },
+  {
+    "customer_name": "Nazma Sultana",
+    "customer_profession": "Graphic Designer",
+    "customer_image": "https://i.ibb.co.com/BV3GYHFJ/linda-walker.jpg",
+    "customer_review": "The sushi rolls were fresh and packed with flavor. The fish tasted super fresh, and the rice had the perfect balance of vinegary sweetness. A must-try for sushi lovers!",
+    "star_rating": 5
+  },
+  {
+    "customer_name": "Shafiqul Islam",
+    "customer_profession": "Teacher",
+    "customer_image": "https://i.ibb.co.com/zVmJV1FV/John-Doe.jpg",
+    "customer_review": "This chicken tikka masala was rich, creamy, and perfectly spiced. The chicken was tender and juicy, and the sauce was absolutely flavorful. I couldn’t get enough of it!",
+    "star_rating": 5
+  },
+  {
+    "customer_name": "Laila Begum",
+    "customer_profession": "Marketing Specialist",
+    "customer_image": "https://i.ibb.co.com/zVmJV1FV/John-Doe.jpg",
+    "customer_review": "The burrito was packed with flavor! The fillings were fresh, and the wrap itself was perfectly warm and soft. It’s hearty and filling—exactly what I wanted for a quick lunch.",
+    "star_rating": 4
+  },
+  {
+    "customer_name": "Dipankar Ghosh",
+    "customer_profession": "Architect",
+    "customer_image": "https://i.ibb.co.com/zVmJV1FV/John-Doe.jpg",
+    "customer_review": "I absolutely loved this lasagna! The layers of pasta, cheese, and meat were perfectly balanced, and the marinara sauce was tangy and delicious. It’s the ultimate comfort food!",
+    "star_rating": 5
+  },
+  {
+    "customer_name": "Sharmila Khatun",
+    "customer_profession": "Photographer",
+    "customer_image": "https://i.ibb.co.com/zVmJV1FV/John-Doe.jpg",
+    "customer_review": "This croissant was heavenly! So flaky and buttery, it melted in my mouth. The perfect treat for breakfast or an afternoon snack. You can tell it was freshly made.",
+    "star_rating": 5
+  },
+  {
+    "customer_name": "Mizanur Rahman",
+    "customer_profession": "Business Consultant",
+    "customer_image": "https://i.ibb.co.com/zVmJV1FV/John-Doe.jpg",
+    "customer_review": "The falafel was crispy on the outside and soft on the inside. The spices were spot-on, giving it just the right amount of flavor. Paired with the tahini sauce, it was a delight.",
+    "star_rating": 4
+  },
+  {
+    "customer_name": "Zohra Ahmed",
+    "customer_profession": "Nurse",
+    "customer_image": "https://i.ibb.co.com/zVmJV1FV/John-Doe.jpg",
+    "customer_review": "The fish and chips were perfectly crispy, and the fish inside was flaky and fresh. A classic British dish done right. The fries were golden and crispy, and the peas were a nice touch.",
+    "star_rating": 5
+  },
+  {
+    "customer_name": "Mahmudul Hasan",
+    "customer_profession": "Freelance Writer",
+    "customer_image": "https://i.ibb.co.com/zVmJV1FV/John-Doe.jpg",
+    "customer_review": "This cheeseburger was exactly what I was craving! The patty was juicy and tender, and the cheese was perfectly melted. The lettuce and tomato were fresh, and the bun held everything together.",
+    "star_rating": 5
+  },
+  {
+    "customer_name": "Madhuri Roy",
+    "customer_profession": "Lawyer",
+    "customer_image": "https://i.ibb.co.com/zVmJV1FV/John-Doe.jpg",
+    "customer_review": "The ramen was absolutely amazing! The broth was rich and savory, and the noodles were cooked to perfection. I loved the soft-boiled egg and the fresh vegetables—everything just came together so well.",
+    "star_rating": 5
+  },
+  {
+    "customer_name": "Jannatul Ferdous",
+    "customer_profession": "Engineer",
+    "customer_image": "https://i.ibb.co.com/zVmJV1FV/John-Doe.jpg",
+    "customer_review": "The Pad Thai was delicious! The rice noodles had the perfect texture, and the tofu, shrimp, and peanuts gave it a great variety of flavors. I loved the tangy lime added on top.",
+    "star_rating": 5
+  },
+  {
+    "customer_name": "Kamal Hossain",
+    "customer_profession": "Event Planner",
+    "customer_image": "https://i.ibb.co.com/zVmJV1FV/John-Doe.jpg",
+    "customer_review": "A simple yet flavorful pizza! The crust was thin and crispy, and the tomato sauce was fresh and tangy. The mozzarella was perfectly melted, and the basil added a nice touch of freshness.",
+    "star_rating": 5
+  },
+  {
+    "customer_name": "Rumana Sultana",
+    "customer_profession": "Chef",
+    "customer_image": "https://i.ibb.co.com/zVmJV1FV/John-Doe.jpg",
+    "customer_review": "This moussaka was absolutely fantastic! The layers of eggplant, meat, and béchamel sauce were cooked to perfection. It was rich, creamy, and packed with flavor. Highly recommend!",
+    "star_rating": 5
+  }
+]

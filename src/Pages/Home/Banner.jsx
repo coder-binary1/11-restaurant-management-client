@@ -6,7 +6,7 @@ const Banner = () => {
     <div className="hero bg-gray-800 py-10">
       <div className="hero-content flex-col md:flex-row-reverse justify-center">
         <div className="flex-1 ">
-          <img src={banner} className="ml-auto  scale-80" />
+          <img src={banner} className="ml-auto scale-80" />
         </div>
         <div className="flex-1 text-white text-center md:text-left">
           <h1 className="text-5xl md:text-7xl  font-bold font-playfair-display">
@@ -19,7 +19,7 @@ const Banner = () => {
             cravings today!
           </p>
           <Link to="allFoods">
-            <button className="btn btn-soft btn-lg bg-red-500 border-0 text-white">
+            <button className="btn btn-soft btn-lg bg-red-500 hover:bg-black border-0 text-white transition-all duration-500">
               All Foods
             </button>
           </Link>

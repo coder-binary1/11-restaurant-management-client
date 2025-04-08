@@ -1,6 +1,4 @@
 const SingleFoodCard = ({ food }) => {
-  console.log(food);
-
   const { _id, foodName, foodImage, foodCategory, price } = food;
   const foodPrice = Math.ceil(price * 10);
 
@@ -18,7 +16,7 @@ const SingleFoodCard = ({ food }) => {
           Price: {foodPrice} <span className="font-dancing-script">Taka</span>
         </p>
         <div className="card-actions ">
-          <button className="btn bg-gray-800 border-0 hover:bg-red-500 transition-all duration-300 text-white w-full ">
+          <button className="btn bg-gray-800 border-0 hover:bg-red-500 transition-all duration-500 text-white w-full ">
             Details
           </button>
         </div>
