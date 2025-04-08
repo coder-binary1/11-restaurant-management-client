@@ -1,5 +1,7 @@
 [
   {
+    "foodQuantity": 10,
+    "addedBy": "system",
     "foodName": "Spaghetti Carbonara",
     "foodImage": "https://i.ibb.co.com/Y7bkw7HS/Spaghetti-Carbonara.jpg",
     "foodCategory": "Pasta",
@@ -10,6 +12,8 @@
     "description": "Spaghetti with a creamy sauce made from eggs, cheese, pancetta, and pepper."
   },
   {
+    "foodQuantity": 10,
+    "addedBy": "system",
     "foodName": "Sushi Rolls",
     "foodImage": "https://i.ibb.co.com/CswdnkVc/Sushi-Rolls.jpg",
     "foodCategory": "Japanese",
@@ -20,6 +24,8 @@
     "description": "Vinegared rice served with various fillings such as fish, vegetables, or egg."
   },
   {
+    "foodQuantity": 10,
+    "addedBy": "system",
     "foodName": "Chicken Tikka Masala",
     "foodImage": "https://i.ibb.co.com/bRbHcDrq/Chicken-Tikka-Masala.jpg",
     "foodCategory": "Bengali",
@@ -30,6 +36,8 @@
     "description": "Boneless chicken cooked in a creamy, spiced tomato sauce, typically served with rice."
   },
   {
+    "foodQuantity": 10,
+    "addedBy": "system",
     "foodName": "Burrito",
     "foodImage": "https://i.ibb.co.com/B5hWFXt3/Burrito.jpg",
     "foodCategory": "Mexican",
@@ -40,6 +48,8 @@
     "description": "Flour tortilla filled with beans, rice, meat, cheese, and other fillings."
   },
   {
+    "foodQuantity": 10,
+    "addedBy": "system",
     "foodName": "Lasagna",
     "foodImage": "https://i.ibb.co.com/6Jy9Gx3p/Lasagna.jpg",
     "foodCategory": "Italian",
@@ -50,6 +60,8 @@
     "description": "Layers of pasta, cheese, meat, and marinara sauce, baked until bubbly and golden."
   },
   {
+    "foodQuantity": 10,
+    "addedBy": "system",
     "foodName": "Croissant",
     "foodImage": "https://i.ibb.co.com/xqXC1RQx/Croissant.jpg",
     "foodCategory": "Pastry",
@@ -60,6 +72,8 @@
     "description": "Buttery, flaky, and crescent-shaped pastry, typically eaten for breakfast."
   },
   {
+    "foodQuantity": 10,
+    "addedBy": "system",
     "foodName": "Falafel",
     "foodImage": "https://i.ibb.co.com/Qv03TmVY/Falafel.jpg",
     "foodCategory": "Middle Eastern",
@@ -70,6 +84,8 @@
     "description": "Deep-fried balls made from ground chickpeas, herbs, and spices."
   },
   {
+    "foodQuantity": 10,
+    "addedBy": "system",
     "foodName": "Fish and Chips",
     "foodImage": "https://i.ibb.co.com/zhcwGp6G/Fish-and-Chips.jpg",
     "foodCategory": "British",
@@ -80,6 +96,8 @@
     "description": "Battered and deep-fried fish served with fries and often accompanied by peas."
   },
   {
+    "foodQuantity": 10,
+    "addedBy": "system",
     "foodName": "Cheeseburger",
     "foodImage": "https://i.ibb.co.com/qMgVsmZr/Cheeseburger.jpg",
     "foodCategory": "American",
@@ -90,6 +108,8 @@
     "description": "A beef patty with cheese, lettuce, tomato, and condiments, served in a bun."
   },
   {
+    "foodQuantity": 10,
+    "addedBy": "system",
     "foodName": "Ramen",
     "foodImage": "https://i.ibb.co.com/ML2042t/Ramen.jpg",
     "foodCategory": "Japanese",
@@ -100,6 +120,8 @@
     "description": "Japanese noodle soup served with broth, vegetables, meat, and egg."
   },
   {
+    "foodQuantity": 10,
+    "addedBy": "system",
     "foodName": "Pad Thai",
     "foodImage": "https://i.ibb.co.com/8nkNvcrx/Pad-Thai.jpg",
     "foodCategory": "Thai",
@@ -110,6 +132,8 @@
     "description": "Stir-fried rice noodles with eggs, tofu, shrimp, and peanuts, often served with lime."
   },
   {
+    "foodQuantity": 10,
+    "addedBy": "system",
     "foodName": "Pizza Margherita",
     "foodImage": "https://i.ibb.co.com/gZdHHKd4/Pizza-Margherita.jpg",
     "foodCategory": "Italian",
@@ -120,6 +144,8 @@
     "description": "Thin crust pizza with tomato sauce, mozzarella, and fresh basil."
   },
   {
+    "foodQuantity": 10,
+    "addedBy": "system",
     "foodName": "Moussaka",
     "foodImage": "https://i.ibb.co.com/RTzmkx3F/Moussaka.jpg",
     "foodCategory": "Greek",
@@ -130,6 +156,8 @@
     "description": "Layers of eggplant, minced meat, and béchamel sauce, baked to perfection."
   },
   {
+    "foodQuantity": 10,
+    "addedBy": "system",
     "foodName": "Samosa",
     "foodImage": "https://i.ibb.co.com/d0vNM7yH/Samosa.jpg",
     "foodCategory": "Bengali",
@@ -140,6 +168,8 @@
     "description": "Fried pastry filled with spiced potatoes, peas, and sometimes meat."
   },
   {
+    "foodQuantity": 10,
+    "addedBy": "system",
     "foodName": "Bruschetta",
     "foodImage": "https://i.ibb.co.com/spc5zHsD/Bruschetta.jpg",
     "foodCategory": "Italian",
@@ -150,6 +180,8 @@
     "description": "Grilled bread topped with diced tomatoes, garlic, basil, and olive oil."
   },
   {
+    "foodQuantity": 10,
+    "addedBy": "system",
     "foodName": "Tacos",
     "foodImage": "https://i.ibb.co.com/h1r947zw/Tacos.jpg",
     "foodCategory": "Mexican",
@@ -160,6 +192,8 @@
     "description": "Small tortillas filled with a variety of meats, vegetables, and salsas."
   },
   {
+    "foodQuantity": 10,
+    "addedBy": "system",
     "foodName": "Tempura",
     "foodImage": "https://i.ibb.co.com/5x2mF3gt/Tempura.jpg",
     "foodCategory": "Japanese",
@@ -170,6 +204,8 @@
     "description": "Battered and deep-fried seafood and vegetables, often served with dipping sauce."
   },
   {
+    "foodQuantity": 10,
+    "addedBy": "system",
     "foodName": "Pavlova",
     "foodImage": "https://i.ibb.co.com/hJX8t8WP/Pavlova.jpg",
     "foodCategory": "Dessert",
@@ -180,6 +216,8 @@
     "description": "Meringue-based dessert topped with fresh fruits like berries and kiwi."
   },
   {
+    "foodQuantity": 10,
+    "addedBy": "system",
     "foodName": "Kebab",
     "foodImage": "https://i.ibb.co.com/Fb1YQBXy/Kebab.jpg",
     "foodCategory": "Middle Eastern",
@@ -190,6 +228,8 @@
     "description": "Skewered meat, often lamb or chicken, grilled and served with vegetables."
   },
   {
+    "foodQuantity": 10,
+    "addedBy": "system",
     "foodName": "Goulash",
     "foodImage": "https://i.ibb.co.com/3yW641Mq/Goulash.jpg",
     "foodCategory": "Hungarian",

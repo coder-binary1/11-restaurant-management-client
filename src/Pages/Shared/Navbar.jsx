@@ -1,20 +1,42 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
 import logo from "../../assets/logo.png";
 
 const Navbar = () => {
   const { user, logOutUser } = useAuth();
+  const location = useLocation();
 
   const links = (
     <>
       <li>
-        <Link to="/">Home</Link>
+        <NavLink
+          to="/"
+          className={({ isActive }) =>
+            isActive ? "bg-red-500 text-white" : ""
+          }
+        >
+          Home
+        </NavLink>
       </li>
       <li>
-        <Link to="/allFoods">All Foods</Link>
+        <NavLink
+          to="/allFoods"
+          className={({ isActive }) =>
+            isActive ? "bg-red-500 text-white" : ""
+          }
+        >
+          All Foods
+        </NavLink>
       </li>
       <li>
-        <Link to="/gallery">Gallery</Link>
+        <NavLink
+          to="/gallery"
+          className={({ isActive }) =>
+            isActive ? "bg-red-500 text-white" : ""
+          }
+        >
+          Gallery
+        </NavLink>
       </li>
     </>
   );
@@ -37,9 +59,19 @@ const Navbar = () => {
     logOutUser();
   };
   return (
-    <div className="navbar max-w-7xl mx-auto absolute left-0 right-0 z-10  ">
+    <div
+      className={
+        location.pathname === "/"
+          ? "navbar max-w-7xl mx-auto absolute left-0 right-0 z-10"
+          : "navbar max-w-7xl mx-auto"
+      }
+    >
       <div className="navbar-start">
-        <div className="dropdown text-white">
+        <div
+          className={
+            location.pathname === "/" ? "dropdown text-white" : "dropdown"
+          }
+        >
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -67,14 +99,28 @@ const Navbar = () => {
         <Link to="/">
           <button className=" btn btn-ghost ">
             <img className="w-8" src={logo} alt="logo" />
-            <h2 className="text-3xl font-bold font-dancing-script text-white">
+            <h2
+              className={
+                location.pathname === "/"
+                  ? "text-3xl font-bold font-dancing-script text-white"
+                  : "text-3xl font-bold font-dancing-script"
+              }
+            >
               Grillix
             </h2>
           </button>
         </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1 text-white">{links}</ul>
+        <ul
+          className={
+            location.pathname === "/"
+              ? "menu menu-horizontal px-1 text-white"
+              : "menu menu-horizontal px-1"
+          }
+        >
+          {links}
+        </ul>
       </div>
       <div className="navbar-end">
         {user ? (

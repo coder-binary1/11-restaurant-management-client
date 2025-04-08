@@ -1,5 +1,8 @@
+import { Link, useLocation } from "react-router-dom";
+
 const SingleFoodCard = ({ food }) => {
-  const { _id, foodName, foodImage, foodCategory, price } = food;
+  const location = useLocation();
+  const { _id, foodName, foodImage, foodCategory, price, foodQuantity } = food;
   const foodPrice = Math.ceil(price * 10);
 
   return (
@@ -12,13 +15,20 @@ const SingleFoodCard = ({ food }) => {
           <h2 className="card-title text-gray-800">{foodName} </h2>
           <div className="badge badge-soft badge-error">{foodCategory}</div>
         </div>
-        <p className="text-base font-medium text-gray-600">
-          Price: {foodPrice} <span className="font-dancing-script">Taka</span>
-        </p>
-        <div className="card-actions ">
-          <button className="btn bg-gray-800 border-0 hover:bg-red-500 transition-all duration-500 text-white w-full ">
-            Details
-          </button>
+        <div className="flex justify-between text-base font-medium text-gray-600 ">
+          <p>
+            Price: {foodPrice} <span className="font-dancing-script">Taka</span>
+          </p>
+          {location.pathname === "/allFoods" && (
+            <p className="text-right">Available: {foodQuantity}</p>
+          )}
+        </div>
+        <div>
+          <Link to={`/allFoods/${_id}`}>
+            <button className="btn bg-gray-800 border-0 hover:bg-red-500 transition-all duration-500 text-white w-full ">
+              Details
+            </button>
+          </Link>
         </div>
       </div>
     </div>

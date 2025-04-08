@@ -1,12 +1,9 @@
 const SingleCustomerReview = ({ review }) => {
-  console.log(review);
-
   const {
     customer_image,
     customer_name,
     customer_profession,
     customer_review,
-    star_rating,
   } = review;
 
   return (
