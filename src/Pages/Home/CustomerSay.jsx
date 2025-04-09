@@ -1,14 +1,15 @@
 import { useEffect, useState } from "react";
 import Marquee from "react-fast-marquee";
 import SingleCustomerReview from "./SingleCustomerReview";
+import axios from "axios";
 
 const CustomerSay = () => {
   const [reviews, setReviews] = useState();
 
   useEffect(() => {
-    fetch("fakeReview.json")
-      .then((res) => res.json())
-      .then((data) => setReviews(data));
+    axios
+      .get("http://localhost:5000/reviews")
+      .then((res) => setReviews(res.data));
   }, []);
   return (
     <div className="max-w-7xl mx-auto my-20 ">

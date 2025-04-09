@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import GoogleLogin from "./GoogleLogin";
 import useAuth from "../../hooks/useAuth";
 import passwordValidation from "./passwordValidation";
@@ -9,6 +9,7 @@ const Login = () => {
   const [error, setError] = useState();
   const { signInUser } = useAuth();
   const navigate = useNavigate();
+  const location = useLocation();
 
   const handleLogin = (e) => {
     e.preventDefault();
@@ -36,7 +37,7 @@ const Login = () => {
             theme: "light",
             transition: Slide,
           });
-          navigate("/");
+          navigate(location.state || "/");
         })
         .catch((err) => setError(err.message));
 

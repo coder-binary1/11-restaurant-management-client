@@ -24,7 +24,7 @@ const SingleFoodCard = ({ food }) => {
           )}
         </div>
         <div>
-          <Link to={`/allFoods/${_id}`}>
+          <Link to={`/allFood/${_id}`}>
             <button className="btn bg-gray-800 border-0 hover:bg-red-500 transition-all duration-500 text-white w-full ">
               Details
             </button>

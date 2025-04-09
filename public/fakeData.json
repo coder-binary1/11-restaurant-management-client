@@ -1,242 +1,223 @@
 [
   {
-    "foodQuantity": 10,
-    "addedBy": "system",
-    "foodName": "Spaghetti Carbonara",
-    "foodImage": "https://i.ibb.co.com/Y7bkw7HS/Spaghetti-Carbonara.jpg",
-    "foodCategory": "Pasta",
-    "quantity": 1,
-    "quantityType": "plate",
-    "price": 12.99,
-    "foodOrigin": "Italy",
-    "description": "Spaghetti with a creamy sauce made from eggs, cheese, pancetta, and pepper."
+    "food_name": "Apple Pie",
+    "food_image": "https://i.ibb.co.com/gnXNNHt/Apple-Pie.jpg",
+    "food_category": "American",
+    "quantity": "1 slice",
+    "price": 3.5,
+    "add_by": {
+      "name": "Sarah White",
+      "email": "sarah.white@example.com"
+    },
+    "food_origin": "United States",
+    "description": "A classic dessert with spiced apple filling encased in a flaky pie crust."
   },
   {
-    "foodQuantity": 10,
-    "addedBy": "system",
-    "foodName": "Sushi Rolls",
-    "foodImage": "https://i.ibb.co.com/CswdnkVc/Sushi-Rolls.jpg",
-    "foodCategory": "Japanese",
-    "quantity": 8,
-    "quantityType": "pieces",
-    "price": 18.5,
-    "foodOrigin": "Japan",
-    "description": "Vinegared rice served with various fillings such as fish, vegetables, or egg."
+    "food_name": "Shorshe Ilish",
+    "food_image": "https://i.ibb.co.com/6JsvZ5vx/Shorshe-Ilish.jpg",
+    "food_category": "Bengali",
+    "quantity": "1 plate",
+    "price": 12.5,
+    "add_by": {
+      "name": "Ananya Chatterjee",
+      "email": "ananya.chatterjee@example.com"
+    },
+    "food_origin": "India",
+    "description": "A traditional Bengali dish made with hilsa fish cooked in mustard sauce."
   },
   {
-    "foodQuantity": 10,
-    "addedBy": "system",
-    "foodName": "Chicken Tikka Masala",
-    "foodImage": "https://i.ibb.co.com/bRbHcDrq/Chicken-Tikka-Masala.jpg",
-    "foodCategory": "Bengali",
-    "quantity": 1,
-    "quantityType": "bowl",
-    "price": 15.99,
-    "foodOrigin": "Bangladesh",
-    "description": "Boneless chicken cooked in a creamy, spiced tomato sauce, typically served with rice."
+    "food_name": "Fish Curry",
+    "food_image": "https://example.com/images/fish-curry.jpg",
+    "food_category": "Bengali",
+    "quantity": "1 bowl",
+    "price": 10.0,
+    "add_by": {
+      "name": "Arjun Sen",
+      "email": "arjun.sen@example.com"
+    },
+    "food_origin": "India",
+    "description": "A rich, spiced fish curry made with a variety of Bengali spices and mustard oil."
   },
   {
-    "foodQuantity": 10,
-    "addedBy": "system",
-    "foodName": "Burrito",
-    "foodImage": "https://i.ibb.co.com/B5hWFXt3/Burrito.jpg",
-    "foodCategory": "Mexican",
-    "quantity": 1,
-    "quantityType": "wrap",
-    "price": 10.99,
-    "foodOrigin": "Mexico",
-    "description": "Flour tortilla filled with beans, rice, meat, cheese, and other fillings."
+    "food_name": "Fish and Chips",
+    "food_image": "https://example.com/images/fish-chips.jpg",
+    "food_category": "British",
+    "quantity": "1 serving",
+    "price": 12.5,
+    "add_by": {
+      "name": "George Wilson",
+      "email": "george.wilson@example.com"
+    },
+    "food_origin": "United Kingdom",
+    "description": "Deep-fried fish fillets served with crispy potato fries."
   },
   {
-    "foodQuantity": 10,
-    "addedBy": "system",
-    "foodName": "Lasagna",
-    "foodImage": "https://i.ibb.co.com/6Jy9Gx3p/Lasagna.jpg",
-    "foodCategory": "Italian",
-    "quantity": 1,
-    "quantityType": "slice",
+    "food_name": "Shepherd's Pie",
+    "food_image": "https://example.com/images/shepherds-pie.jpg",
+    "food_category": "British",
+    "quantity": "1 serving",
+    "price": 14.0,
+    "add_by": {
+      "name": "Oliver Gray",
+      "email": "oliver.gray@example.com"
+    },
+    "food_origin": "United Kingdom",
+    "description": "A hearty dish made with minced lamb, vegetables, and mashed potatoes, baked to perfection."
+  },
+  {
+    "food_name": "Baklava",
+    "food_image": "https://example.com/images/baklava.jpg",
+    "food_category": "Dessert",
+    "quantity": "1 piece",
+    "price": 4.5,
+    "add_by": {
+      "name": "Lila Khan",
+      "email": "lila.khan@example.com"
+    },
+    "food_origin": "Middle East",
+    "description": "A sweet pastry made from layers of filo dough, filled with nuts and soaked in honey syrup."
+  },
+  {
+    "food_name": "Chocolate Cake",
+    "food_image": "https://example.com/images/chocolate-cake.jpg",
+    "food_category": "Dessert",
+    "quantity": "1 slice",
+    "price": 3.0,
+    "add_by": {
+      "name": "Rachel Adams",
+      "email": "rachel.adams@example.com"
+    },
+    "food_origin": "Various",
+    "description": "A moist and rich cake made with cocoa, topped with chocolate icing."
+  },
+  {
+    "food_name": "Moussaka",
+    "food_image": "https://example.com/images/moussaka.jpg",
+    "food_category": "Greek",
+    "quantity": "1 serving",
     "price": 14.99,
-    "foodOrigin": "Italy",
-    "description": "Layers of pasta, cheese, meat, and marinara sauce, baked until bubbly and golden."
+    "add_by": {
+      "name": "Niko Koutsou",
+      "email": "niko.koutsou@example.com"
+    },
+    "food_origin": "Greece",
+    "description": "A layered casserole with eggplant, ground meat, and béchamel sauce."
   },
   {
-    "foodQuantity": 10,
-    "addedBy": "system",
-    "foodName": "Croissant",
-    "foodImage": "https://i.ibb.co.com/xqXC1RQx/Croissant.jpg",
-    "foodCategory": "Pastry",
-    "quantity": 1,
-    "quantityType": "piece",
-    "price": 2.99,
-    "foodOrigin": "France",
-    "description": "Buttery, flaky, and crescent-shaped pastry, typically eaten for breakfast."
+    "food_name": "Greek Salad",
+    "food_image": "https://example.com/images/greek-salad.jpg",
+    "food_category": "Greek",
+    "quantity": "1 bowl",
+    "price": 8.0,
+    "add_by": {
+      "name": "Sofia Papadopoulos",
+      "email": "sofia.papadopoulos@example.com"
+    },
+    "food_origin": "Greece",
+    "description": "A refreshing salad made with cucumbers, tomatoes, olives, onions, and feta cheese, drizzled with olive oil."
   },
   {
-    "foodQuantity": 10,
-    "addedBy": "system",
-    "foodName": "Falafel",
-    "foodImage": "https://i.ibb.co.com/Qv03TmVY/Falafel.jpg",
-    "foodCategory": "Middle Eastern",
-    "quantity": 4,
-    "quantityType": "pieces",
+    "food_name": "Lasagna",
+    "food_image": "https://example.com/images/lasagna.jpg",
+    "food_category": "Italian",
+    "quantity": "1 serving",
+    "price": 12.0,
+    "add_by": {
+      "name": "Maria Moretti",
+      "email": "maria.moretti@example.com"
+    },
+    "food_origin": "Italy",
+    "description": "Layers of pasta, meat sauce, ricotta, mozzarella, and parmesan, baked until bubbly."
+  },
+  {
+    "food_name": "Pizza Margherita",
+    "food_image": "https://example.com/images/pizza-margherita.jpg",
+    "food_category": "Italian",
+    "quantity": "1 pizza",
+    "price": 11.5,
+    "add_by": {
+      "name": "Luca Rossi",
+      "email": "luca.rossi@example.com"
+    },
+    "food_origin": "Italy",
+    "description": "A traditional pizza with tomato sauce, mozzarella cheese, and fresh basil."
+  },
+  {
+    "food_name": "Sushi Rolls",
+    "food_image": "https://example.com/images/sushi-rolls.jpg",
+    "food_category": "Japanese",
+    "quantity": "6 pieces",
+    "price": 15.5,
+    "add_by": {
+      "name": "Jane Smith",
+      "email": "jane.smith@example.com"
+    },
+    "food_origin": "Japan",
+    "description": "Fresh sushi rolls made with seasoned rice, seaweed, and various fillings like tuna, avocado, and cucumber."
+  },
+  {
+    "food_name": "Ramen",
+    "food_image": "https://example.com/images/ramen.jpg",
+    "food_category": "Japanese",
+    "quantity": "1 bowl",
+    "price": 11.75,
+    "add_by": {
+      "name": "Kenji Tanaka",
+      "email": "kenji.tanaka@example.com"
+    },
+    "food_origin": "Japan",
+    "description": "A noodle soup dish consisting of Chinese-style wheat noodles, savory broth (usually pork or chicken-based), topped with sliced pork, green onions, and a boiled egg."
+  },
+  {
+    "food_name": "Tacos",
+    "food_image": "https://example.com/images/tacos.jpg",
+    "food_category": "Mexican",
+    "quantity": "3 pieces",
     "price": 8.99,
-    "foodOrigin": "Lebanon",
-    "description": "Deep-fried balls made from ground chickpeas, herbs, and spices."
+    "add_by": {
+      "name": "Carlos Rivera",
+      "email": "carlos.rivera@example.com"
+    },
+    "food_origin": "Mexico",
+    "description": "Soft or crispy corn tortillas filled with seasoned ground beef, chicken, or veggies, topped with salsa, cheese, lettuce, and sour cream."
   },
   {
-    "foodQuantity": 10,
-    "addedBy": "system",
-    "foodName": "Fish and Chips",
-    "foodImage": "https://i.ibb.co.com/zhcwGp6G/Fish-and-Chips.jpg",
-    "foodCategory": "British",
-    "quantity": 1,
-    "quantityType": "serving",
-    "price": 14.5,
-    "foodOrigin": "United Kingdom",
-    "description": "Battered and deep-fried fish served with fries and often accompanied by peas."
+    "food_name": "Guacamole",
+    "food_image": "https://example.com/images/guacamole.jpg",
+    "food_category": "Mexican",
+    "quantity": "1 bowl",
+    "price": 5.5,
+    "add_by": {
+      "name": "Valeria Torres",
+      "email": "valeria.torres@example.com"
+    },
+    "food_origin": "Mexico",
+    "description": "A creamy dip made with mashed avocado, lime, cilantro, onions, and tomatoes, often served with tortilla chips."
   },
   {
-    "foodQuantity": 10,
-    "addedBy": "system",
-    "foodName": "Cheeseburger",
-    "foodImage": "https://i.ibb.co.com/qMgVsmZr/Cheeseburger.jpg",
-    "foodCategory": "American",
-    "quantity": 1,
-    "quantityType": "burger",
-    "price": 11.99,
-    "foodOrigin": "United States",
-    "description": "A beef patty with cheese, lettuce, tomato, and condiments, served in a bun."
-  },
-  {
-    "foodQuantity": 10,
-    "addedBy": "system",
-    "foodName": "Ramen",
-    "foodImage": "https://i.ibb.co.com/ML2042t/Ramen.jpg",
-    "foodCategory": "Japanese",
-    "quantity": 1,
-    "quantityType": "bowl",
-    "price": 13.99,
-    "foodOrigin": "Japan",
-    "description": "Japanese noodle soup served with broth, vegetables, meat, and egg."
-  },
-  {
-    "foodQuantity": 10,
-    "addedBy": "system",
-    "foodName": "Pad Thai",
-    "foodImage": "https://i.ibb.co.com/8nkNvcrx/Pad-Thai.jpg",
-    "foodCategory": "Thai",
-    "quantity": 1,
-    "quantityType": "plate",
-    "price": 12.99,
-    "foodOrigin": "Thailand",
-    "description": "Stir-fried rice noodles with eggs, tofu, shrimp, and peanuts, often served with lime."
-  },
-  {
-    "foodQuantity": 10,
-    "addedBy": "system",
-    "foodName": "Pizza Margherita",
-    "foodImage": "https://i.ibb.co.com/gZdHHKd4/Pizza-Margherita.jpg",
-    "foodCategory": "Italian",
-    "quantity": 1,
-    "quantityType": "pizza",
-    "price": 14.5,
-    "foodOrigin": "Italy",
-    "description": "Thin crust pizza with tomato sauce, mozzarella, and fresh basil."
-  },
-  {
-    "foodQuantity": 10,
-    "addedBy": "system",
-    "foodName": "Moussaka",
-    "foodImage": "https://i.ibb.co.com/RTzmkx3F/Moussaka.jpg",
-    "foodCategory": "Greek",
-    "quantity": 1,
-    "quantityType": "serving",
-    "price": 16.99,
-    "foodOrigin": "Greece",
-    "description": "Layers of eggplant, minced meat, and béchamel sauce, baked to perfection."
-  },
-  {
-    "foodQuantity": 10,
-    "addedBy": "system",
-    "foodName": "Samosa",
-    "foodImage": "https://i.ibb.co.com/d0vNM7yH/Samosa.jpg",
-    "foodCategory": "Bengali",
-    "quantity": 3,
-    "quantityType": "pieces",
-    "price": 5.99,
-    "foodOrigin": "Bangladesh",
-    "description": "Fried pastry filled with spiced potatoes, peas, and sometimes meat."
-  },
-  {
-    "foodQuantity": 10,
-    "addedBy": "system",
-    "foodName": "Bruschetta",
-    "foodImage": "https://i.ibb.co.com/spc5zHsD/Bruschetta.jpg",
-    "foodCategory": "Italian",
-    "quantity": 3,
-    "quantityType": "pieces",
+    "food_name": "Shawarma",
+    "food_image": "https://example.com/images/shawarma.jpg",
+    "food_category": "Middle Eastern",
+    "quantity": "1 wrap",
     "price": 7.99,
-    "foodOrigin": "Italy",
-    "description": "Grilled bread topped with diced tomatoes, garlic, basil, and olive oil."
+    "add_by": {
+      "name": "Amir Ibrahim",
+      "email": "amir.ibrahim@example.com"
+    },
+    "food_origin": "Lebanon",
+    "description": "A Middle Eastern wrap filled with spiced meat (usually lamb, chicken, or beef), vegetables, and garlic sauce."
   },
   {
-    "foodQuantity": 10,
-    "addedBy": "system",
-    "foodName": "Tacos",
-    "foodImage": "https://i.ibb.co.com/h1r947zw/Tacos.jpg",
-    "foodCategory": "Mexican",
-    "quantity": 3,
-    "quantityType": "tacos",
-    "price": 9.5,
-    "foodOrigin": "Mexico",
-    "description": "Small tortillas filled with a variety of meats, vegetables, and salsas."
-  },
-  {
-    "foodQuantity": 10,
-    "addedBy": "system",
-    "foodName": "Tempura",
-    "foodImage": "https://i.ibb.co.com/5x2mF3gt/Tempura.jpg",
-    "foodCategory": "Japanese",
-    "quantity": 1,
-    "quantityType": "plate",
-    "price": 15.99,
-    "foodOrigin": "Japan",
-    "description": "Battered and deep-fried seafood and vegetables, often served with dipping sauce."
-  },
-  {
-    "foodQuantity": 10,
-    "addedBy": "system",
-    "foodName": "Pavlova",
-    "foodImage": "https://i.ibb.co.com/hJX8t8WP/Pavlova.jpg",
-    "foodCategory": "Dessert",
-    "quantity": 1,
-    "quantityType": "slice",
-    "price": 6.5,
-    "foodOrigin": "New Zealand",
-    "description": "Meringue-based dessert topped with fresh fruits like berries and kiwi."
-  },
-  {
-    "foodQuantity": 10,
-    "addedBy": "system",
-    "foodName": "Kebab",
-    "foodImage": "https://i.ibb.co.com/Fb1YQBXy/Kebab.jpg",
-    "foodCategory": "Middle Eastern",
-    "quantity": 1,
-    "quantityType": "skewer",
-    "price": 7.99,
-    "foodOrigin": "Turkey",
-    "description": "Skewered meat, often lamb or chicken, grilled and served with vegetables."
-  },
-  {
-    "foodQuantity": 10,
-    "addedBy": "system",
-    "foodName": "Goulash",
-    "foodImage": "https://i.ibb.co.com/3yW641Mq/Goulash.jpg",
-    "foodCategory": "Hungarian",
-    "quantity": 1,
-    "quantityType": "bowl",
-    "price": 13.5,
-    "foodOrigin": "Hungary",
-    "description": "A hearty stew made with beef, onions, paprika, and vegetables."
+    "food_name": "Falafel",
+    "food_image": "https://example.com/images/falafel.jpg",
+    "food_category": "Middle Eastern",
+    "quantity": "6 pieces",
+    "price": 7.5,
+    "add_by": {
+      "name": "Leila Hassan",
+      "email": "leila.hassan@example.com"
+    },
+    "food_origin": "Lebanon",
+    "description": "Deep-fried chickpea balls served in pita bread with vegetables and tahini sauce."
   }
 ]

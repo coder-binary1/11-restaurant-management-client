@@ -1,10 +1,11 @@
 import { Slide, toast } from "react-toastify";
 import useAuth from "../../hooks/useAuth";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const GoogleLogin = () => {
   const { signInWithGoogle } = useAuth();
   const navigate = useNavigate();
+  const location = useLocation();
 
   const handleGoogleLogin = () => {
     signInWithGoogle()
@@ -21,7 +22,7 @@ const GoogleLogin = () => {
             theme: "light",
             transition: Slide,
           });
-          navigate("/");
+          navigate(location.state || "/");
         }
       })
       .catch((err) => console.log(err.message));

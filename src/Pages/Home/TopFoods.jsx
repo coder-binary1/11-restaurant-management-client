@@ -1,14 +1,15 @@
 import { useEffect, useState } from "react";
 import SingleFoodCard from "../Shared/SingleFoodCard";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 const TopFoods = () => {
   const [foods, setFoods] = useState();
 
   useEffect(() => {
-    fetch("fakeData.json")
-      .then((res) => res.json())
-      .then((data) => setFoods(data));
+    axios
+      .get("http://localhost:5000/allFoods?limit=6&from=topFood")
+      .then((res) => setFoods(res.data));
   }, []);
 
   return (

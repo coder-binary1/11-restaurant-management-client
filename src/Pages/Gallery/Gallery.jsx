@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import Lightbox from "yet-another-react-lightbox";
 import {
   Captions,
@@ -11,29 +11,25 @@ import "yet-another-react-lightbox/plugins/thumbnails.css";
 import "yet-another-react-lightbox/plugins/captions.css";
 import { RowsPhotoAlbum } from "react-photo-album";
 import "react-photo-album/rows.css";
+import axios from "axios";
 
 const Gallery = () => {
   const [index, setIndex] = useState(-1);
   const [slides, setSlides] = useState([]);
-  const captionsRef = useRef(null);
 
   useEffect(() => {
-    fetch("fakeData.json")
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-
-        const newData = data.map((dt) => {
-          return {
-            src: dt.foodImage,
-            title: dt.foodName,
-            description: dt.description,
-            width: 500,
-            height: 500,
-          };
-        });
-        setSlides(newData);
+    axios.get("http://localhost:5000/allFoods").then((res) => {
+      const newData = res.data.map((dt) => {
+        return {
+          src: dt.foodImage,
+          title: dt.foodName,
+          description: dt.description,
+          width: 500,
+          height: 500,
+        };
       });
+      setSlides(newData);
+    });
   }, []);
 
   return (
