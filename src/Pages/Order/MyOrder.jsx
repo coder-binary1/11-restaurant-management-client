@@ -1,8 +1,8 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
 import useAuth from "../../hooks/useAuth";
-import MySingleOrder from "./MySingleOrder";
+import { useEffect, useState } from "react";
 import { Slide, toast } from "react-toastify";
+import MyOrderCard from "./MyOrderCard";
 
 const MyOrder = () => {
   const { user } = useAuth();
@@ -31,18 +31,19 @@ const MyOrder = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/order?user=${user.email}`)
+      .get(`http://localhost:5000/order?user=${user?.email}`)
       .then((res) => setOrders(res.data));
   }, [user]);
 
   return (
     <div className="max-w-7xl mx-auto my-10 space-y-4">
+      <h2 className="text-4xl font-bold text-center mb-5">My Orders</h2>
       {orders?.map((order) => (
-        <MySingleOrder
+        <MyOrderCard
           key={order._id}
           order={order}
           handleDeleteOrder={handleDeleteOrder}
-        ></MySingleOrder>
+        ></MyOrderCard>
       ))}
     </div>
   );

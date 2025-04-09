@@ -51,11 +51,19 @@ const router = createBrowserRouter([
       },
       {
         path: "/addFood",
-        element: <AddFood></AddFood>,
+        element: (
+          <PrivateRoute>
+            <AddFood></AddFood>
+          </PrivateRoute>
+        ),
       },
       {
         path: "/myFood",
-        element: <MyFood></MyFood>,
+        element: (
+          <PrivateRoute>
+            <MyFood></MyFood>
+          </PrivateRoute>
+        ),
       },
       { path: "gallery", element: <Gallery></Gallery> },
       {

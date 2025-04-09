@@ -2,7 +2,7 @@ import axios from "axios";
 import moment from "moment/moment";
 import { useEffect, useState } from "react";
 
-const MySingleOrder = ({ order, handleDeleteOrder }) => {
+const MyOrderCard = ({ order, handleDeleteOrder }) => {
   const [food, setFood] = useState();
 
   useEffect(() => {
@@ -46,4 +46,4 @@ const MySingleOrder = ({ order, handleDeleteOrder }) => {
   );
 };
 
-export default MySingleOrder;
+export default MyOrderCard;

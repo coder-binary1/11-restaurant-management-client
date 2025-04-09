@@ -134,6 +134,7 @@ const AddFood = () => {
         </div>
         <label className="fieldset-label">Description</label>
         <textarea
+          name="description"
           className="textarea  w-full focus:outline-none"
           placeholder="Description"
           rows="6"
