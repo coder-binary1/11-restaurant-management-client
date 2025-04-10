@@ -38,6 +38,7 @@ const MyOrder = () => {
   return (
     <div className="max-w-7xl mx-auto my-10 space-y-4">
       <h2 className="text-4xl font-bold text-center mb-5">My Orders</h2>
+      {!orders?.length && <p className="text-center">No Oder Found</p>}
       {orders?.map((order) => (
         <MyOrderCard
           key={order._id}

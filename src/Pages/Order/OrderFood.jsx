@@ -11,7 +11,6 @@ const OrderFood = () => {
   const [modalMessage, setModalMessage] = useState();
 
   const food = useLoaderData();
-  console.log(food);
 
   const foodPrice = Math.ceil(food?.price * 10);
   const [updatePrice, setUpdatePrice] = useState(foodPrice);
@@ -74,7 +73,7 @@ const OrderFood = () => {
             role="alert"
             className="alert alert-error alert-soft justify-center"
           >
-            <p className="text-center text-base-100">Food is out of stock </p>
+            <span className="text-center">Food is out of stock</span>
           </div>
         )}
 
