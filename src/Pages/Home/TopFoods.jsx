@@ -1,16 +1,17 @@
 import { useEffect, useState } from "react";
 import SingleFoodCard from "../Shared/SingleFoodCard";
 import { Link } from "react-router-dom";
-import axios from "axios";
+import useAxiosPublic from "../../hooks/useAxiosPublic";
 
 const TopFoods = () => {
   const [foods, setFoods] = useState();
+  const axiosPublic = useAxiosPublic();
 
   useEffect(() => {
-    axios
-      .get("http://localhost:5000/allFoods?limit=6&from=topFood")
+    axiosPublic
+      .get("allFoods?limit=6&from=topFood")
       .then((res) => setFoods(res.data));
-  }, []);
+  }, [axiosPublic]);
 
   return (
     <div className="max-w-7xl mx-auto my-20 ">

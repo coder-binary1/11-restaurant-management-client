@@ -1,14 +1,15 @@
 import { useLoaderData, useNavigate, useParams } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
 import { useState } from "react";
-import axios from "axios";
 import { Slide, toast } from "react-toastify";
+import useAxiosPublic from "../../hooks/useAxiosPublic";
 
 const OrderFood = () => {
   const { user } = useAuth();
   const id = useParams();
   const navigate = useNavigate();
   const [modalMessage, setModalMessage] = useState();
+  const axiosPublic = useAxiosPublic();
 
   const food = useLoaderData();
 
@@ -37,10 +38,10 @@ const OrderFood = () => {
       return document.getElementById("my_modal_1").showModal();
     }
 
-    axios.post("http://localhost:5000/order", newData).then((res) => {
+    axiosPublic.post("order", newData).then((res) => {
       if (res.data?.insertedId) {
-        axios
-          .patch(`http://localhost:5000/allFood/${id.foodId}`, {
+        axiosPublic
+          .patch(`allFood/${id.foodId}`, {
             orderQuantity,
           })
           .then((res) => {

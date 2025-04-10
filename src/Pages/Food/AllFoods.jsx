@@ -1,22 +1,20 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import SingleFoodCard from "../Shared/SingleFoodCard";
-import axios from "axios";
+import useAxiosPublic from "../../hooks/useAxiosPublic";
 
 const AllFoods = () => {
   const [foods, setFoods] = useState();
+  const axiosPublic = useAxiosPublic();
 
   useEffect(() => {
-    axios
-      .get("http://localhost:5000/allFoods")
-      .then((res) => setFoods(res.data));
-  }, []);
+    axiosPublic.get("allFoods").then((res) => setFoods(res.data));
+  }, [axiosPublic]);
 
   const handleSearch = (e) => {
     e.preventDefault();
     const searchValue = e.target.value;
-    axios
-      .get(`http://localhost:5000/allFoods?search=${searchValue}`)
+    axiosPublic
+      .get(`allFoods?search=${searchValue}`)
       .then((res) => setFoods(res.data));
   };
 

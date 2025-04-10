@@ -1,15 +1,14 @@
-import axios from "axios";
 import moment from "moment/moment";
 import { useEffect, useState } from "react";
+import useAxiosSecure from "../../hooks/useAxiosSecure";
 
 const MyOrderCard = ({ order, handleDeleteOrder }) => {
   const [food, setFood] = useState();
+  const axiosSecure = useAxiosSecure();
 
   useEffect(() => {
-    axios
-      .get(`http://localhost:5000/allFood/${order.foodId}`)
-      .then((res) => setFood(res.data));
-  }, [order]);
+    axiosSecure.get(`allFood/${order.foodId}`).then((res) => setFood(res.data));
+  }, [order, axiosSecure]);
 
   return (
     <div className="flex gap-3 bg-base-200 shadow-sm rounded-lg">

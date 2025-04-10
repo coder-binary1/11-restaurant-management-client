@@ -1,5 +1,5 @@
-import axios from "axios";
 import { Slide, toast } from "react-toastify";
+import useAxiosPublic from "../../hooks/useAxiosPublic";
 
 const MyFoodUpdate = ({ food }) => {
   const categories = [
@@ -18,29 +18,28 @@ const MyFoodUpdate = ({ food }) => {
     "Thai",
     "Hungarian",
   ];
+  const axiosPublic = useAxiosPublic();
 
   const handleFoodUpdate = (e) => {
     e.preventDefault();
     const fromData = new FormData(e.target);
     const initialData = Object.fromEntries(fromData.entries());
-    axios
-      .put(`http://localhost:5000/allFood/${food._id}`, initialData)
-      .then((res) => {
-        if (res.data.modifiedCount) {
-          toast.success("Food Updated", {
-            position: "top-center",
-            autoClose: 2000,
-            hideProgressBar: true,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "light",
-            transition: Slide,
-          });
-          document.getElementById("modalClose").click();
-        }
-      });
+    axiosPublic.put(`allFood/${food._id}`, initialData).then((res) => {
+      if (res.data.modifiedCount) {
+        toast.success("Food Updated", {
+          position: "top-center",
+          autoClose: 2000,
+          hideProgressBar: true,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+          transition: Slide,
+        });
+        document.getElementById("modalClose").click();
+      }
+    });
   };
 
   return (

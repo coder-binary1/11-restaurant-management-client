@@ -1,6 +1,6 @@
-import axios from "axios";
 import useAuth from "../../hooks/useAuth";
 import { Slide, toast } from "react-toastify";
+import useAxiosPublic from "../../hooks/useAxiosPublic";
 
 const AddFood = () => {
   const { user } = useAuth();
@@ -20,6 +20,7 @@ const AddFood = () => {
     "Thai",
     "Hungarian",
   ];
+  const axiosPublic = useAxiosPublic();
 
   const handleAddFood = (e) => {
     e.preventDefault();
@@ -32,7 +33,7 @@ const AddFood = () => {
       addedBy: { user: user.displayName, email: user.email },
     };
 
-    axios.post("http://localhost:5000/allFoods", newData).then((res) => {
+    axiosPublic.post("allFoods", newData).then((res) => {
       if (res.data.insertedId) {
         toast.success("Food Added", {
           position: "top-center",

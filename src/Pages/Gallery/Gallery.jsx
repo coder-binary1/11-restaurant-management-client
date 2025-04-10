@@ -11,14 +11,15 @@ import "yet-another-react-lightbox/plugins/thumbnails.css";
 import "yet-another-react-lightbox/plugins/captions.css";
 import { RowsPhotoAlbum } from "react-photo-album";
 import "react-photo-album/rows.css";
-import axios from "axios";
+import useAxiosPublic from "../../hooks/useAxiosPublic";
 
 const Gallery = () => {
   const [index, setIndex] = useState(-1);
   const [slides, setSlides] = useState([]);
+  const axiosPublic = useAxiosPublic();
 
   useEffect(() => {
-    axios.get("http://localhost:5000/allFoods").then((res) => {
+    axiosPublic.get("allFoods").then((res) => {
       const newData = res.data.map((dt) => {
         return {
           src: dt.foodImage,
@@ -30,7 +31,7 @@ const Gallery = () => {
       });
       setSlides(newData);
     });
-  }, []);
+  }, [axiosPublic]);
 
   return (
     <div className="max-w-7xl mx-auto my-10">

@@ -1,16 +1,15 @@
 import { useEffect, useState } from "react";
 import Marquee from "react-fast-marquee";
 import SingleCustomerReview from "./SingleCustomerReview";
-import axios from "axios";
+import useAxiosPublic from "../../hooks/useAxiosPublic";
 
 const CustomerSay = () => {
   const [reviews, setReviews] = useState();
+  const axiosPublic = useAxiosPublic();
 
   useEffect(() => {
-    axios
-      .get("http://localhost:5000/reviews")
-      .then((res) => setReviews(res.data));
-  }, []);
+    axiosPublic.get("reviews").then((res) => setReviews(res.data));
+  }, [axiosPublic]);
   return (
     <div className="max-w-7xl mx-auto my-20 ">
       <h2 className="text-3xl font-bold font-playfair-display text-center mb-8">
