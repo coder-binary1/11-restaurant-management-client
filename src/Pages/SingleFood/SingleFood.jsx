@@ -24,7 +24,7 @@ const SingleFood = () => {
       </figure>
       <div className="card-body">
         <div className="flex justify-between">
-          <h2 className="card-title text-2xl text-gray-800">{foodName} </h2>
+          <h2 className="card-title text-2xl text-gray-700">{foodName} </h2>
           <div className="badge badge-soft badge-error">{foodCategory}</div>
         </div>
         <div className="text-base text-gray-600 space-y-1  mt-2">

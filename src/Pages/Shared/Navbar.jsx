@@ -1,6 +1,7 @@
 import { Link, NavLink, useLocation } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
 import logo from "../../assets/logo.png";
+import ThemeSwitcher from "../../Context/ThemeContext/ThemeSwitcher";
 
 const Navbar = () => {
   const { user, logOutUser } = useAuth();
@@ -123,6 +124,7 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end">
+        <ThemeSwitcher></ThemeSwitcher>
         {user ? (
           <div className="dropdown ">
             <div

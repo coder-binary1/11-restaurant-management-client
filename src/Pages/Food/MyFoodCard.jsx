@@ -19,7 +19,7 @@ const MyFoodCard = ({ myFood, handleEditBtn }) => {
       </figure>
       <div className="text-gray-600 flex pl-2 py-2 pr-4 justify-between grow">
         <div className="">
-          <h2 className="font-medium text-xl text-gray-800">{foodName}</h2>
+          <h2 className="font-medium text-xl text-gray-700">{foodName}</h2>
           <p>Available: {foodQuantity}</p>
           <p>Quantity: {foodQuantityType}</p>
         </div>

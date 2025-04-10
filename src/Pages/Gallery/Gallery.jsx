@@ -12,10 +12,11 @@ import "yet-another-react-lightbox/plugins/captions.css";
 import { RowsPhotoAlbum } from "react-photo-album";
 import "react-photo-album/rows.css";
 import useAxiosPublic from "../../hooks/useAxiosPublic";
+import Loading from "../../Components/Loading";
 
 const Gallery = () => {
   const [index, setIndex] = useState(-1);
-  const [slides, setSlides] = useState([]);
+  const [slides, setSlides] = useState();
   const axiosPublic = useAxiosPublic();
 
   useEffect(() => {
@@ -32,6 +33,10 @@ const Gallery = () => {
       setSlides(newData);
     });
   }, [axiosPublic]);
+
+  if (!slides) {
+    return <Loading></Loading>;
+  }
 
   return (
     <div className="max-w-7xl mx-auto my-10">

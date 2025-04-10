@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import SingleFoodCard from "../Shared/SingleFoodCard";
 import useAxiosPublic from "../../hooks/useAxiosPublic";
+import Loading from "../../Components/Loading";
 
 const AllFoods = () => {
   const [foods, setFoods] = useState();
@@ -17,6 +18,9 @@ const AllFoods = () => {
       .get(`allFoods?search=${searchValue}`)
       .then((res) => setFoods(res.data));
   };
+  if (!foods) {
+    return <Loading></Loading>;
+  }
 
   return (
     <div className="max-w-7xl mx-auto my-10 ">

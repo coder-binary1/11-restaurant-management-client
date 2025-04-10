@@ -6,13 +6,13 @@ const SingleFoodCard = ({ food }) => {
   const foodPrice = Math.ceil(price * 10);
 
   return (
-    <div className="card bg-base-100 w-100 shadow-sm">
+    <div className="card bg-base-100 shadow-sm">
       <figure>
         <img src={foodImage} alt={foodName} />
       </figure>
       <div className="card-body">
         <div className="flex justify-between">
-          <h2 className="card-title text-gray-800">{foodName} </h2>
+          <h2 className="card-title text-gray-700">{foodName} </h2>
           <div className="badge badge-soft badge-error">{foodCategory}</div>
         </div>
         <div className="flex justify-between text-base font-medium text-gray-600 ">

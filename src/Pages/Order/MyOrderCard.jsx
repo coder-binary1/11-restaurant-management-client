@@ -17,7 +17,7 @@ const MyOrderCard = ({ order, handleDeleteOrder }) => {
       </figure>
       <div className="flex pl-2 py-2 pr-4 justify-between grow">
         <div className="">
-          <h2 className="font-medium text-xl text-gray-800">
+          <h2 className="font-medium text-xl text-gray-700">
             {order?.foodName}
           </h2>
           <div className="badge badge-soft badge-error">
