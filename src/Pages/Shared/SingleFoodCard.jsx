@@ -6,7 +6,7 @@ const SingleFoodCard = ({ food }) => {
   const foodPrice = Math.ceil(price * 10);
 
   return (
-    <div className="card bg-base-100  shadow-sm">
+    <div className="card bg-base-100 w-100 shadow-sm">
       <figure>
         <img src={foodImage} alt={foodName} />
       </figure>

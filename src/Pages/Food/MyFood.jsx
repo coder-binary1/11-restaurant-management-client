@@ -20,8 +20,6 @@ const MyFood = () => {
     document.getElementById("updateFoodModal").showModal();
   };
 
-  console.log(selectedFood);
-
   return (
     <div className="max-w-7xl mx-auto my-10 space-y-4">
       <h2 className="text-4xl font-bold text-center mb-5">My Foods</h2>
