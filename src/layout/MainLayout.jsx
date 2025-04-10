@@ -6,11 +6,10 @@ import ThemeProvider from "../Context/ThemeContext/ThemeProvider";
 import { useEffect } from "react";
 
 const MainLayout = () => {
-  const location = useLocation();
-
+  const { pathname } = useLocation();
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, [location]);
+  }, [pathname]);
 
   return (
     <div className="flex flex-col h-screen mx-auto font-poppins">
