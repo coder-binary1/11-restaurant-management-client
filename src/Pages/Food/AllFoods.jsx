@@ -2,14 +2,30 @@ import React, { useEffect, useState } from "react";
 import SingleFoodCard from "../Shared/SingleFoodCard";
 import useAxiosPublic from "../../hooks/useAxiosPublic";
 import Loading from "../../Components/Loading";
+import { useLoaderData } from "react-router-dom";
 
 const AllFoods = () => {
   const [foods, setFoods] = useState();
   const axiosPublic = useAxiosPublic();
 
+  const count = useLoaderData();
+  const [currentPage, setCurrentPage] = useState(0);
+  const [itemsPerPage, setItemsPerPage] = useState(9);
+  const numberOfPages = Math.ceil(count / itemsPerPage);
+
+  const pages = [...Array(numberOfPages).keys()];
+
+  const handleItemsPerPage = (e) => {
+    const value = parseInt(e.target.value);
+    setItemsPerPage(value);
+    setCurrentPage(0);
+  };
+
   useEffect(() => {
-    axiosPublic.get("allFoods").then((res) => setFoods(res.data));
-  }, [axiosPublic]);
+    axiosPublic
+      .get(`allFoods?limit=${itemsPerPage}&page=${currentPage}`)
+      .then((res) => setFoods(res.data));
+  }, [axiosPublic, itemsPerPage, currentPage]);
 
   const handleSearch = (e) => {
     e.preventDefault();
@@ -18,6 +34,7 @@ const AllFoods = () => {
       .get(`allFoods?search=${searchValue}`)
       .then((res) => setFoods(res.data));
   };
+
   if (!foods) {
     return <Loading></Loading>;
   }
@@ -40,6 +57,31 @@ const AllFoods = () => {
         {foods?.map((food) => (
           <SingleFoodCard key={food._id} food={food}></SingleFoodCard>
         ))}
+      </div>
+      <div className="flex justify-between mt-10">
+        <div>
+          <select
+            onChange={handleItemsPerPage}
+            value={itemsPerPage}
+            className="select focus:outline-0"
+          >
+            <option value={6}>6</option>
+            <option value={9}>9</option>
+            <option value={15}>15</option>
+            <option value={24}>24</option>
+          </select>
+        </div>
+        <div className="join">
+          {pages.map((page) => (
+            <button
+              key={page}
+              onClick={() => setCurrentPage(page)}
+              className="join-item btn bg-red-400 text-white"
+            >
+              {page + 1}
+            </button>
+          ))}
+        </div>
       </div>
     </div>
   );
