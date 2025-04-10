@@ -1,19 +1,20 @@
-import axios from "axios";
 import { useEffect, useState } from "react";
 import useAuth from "../../hooks/useAuth";
 import MyFoodCard from "./MyFoodCard";
 import MyFoodUpdate from "./MyFoodUpdate";
+import useAxiosSecure from "../../hooks/useAxiosSecure";
 
 const MyFood = () => {
   const { user } = useAuth();
   const [myFoods, setMyFoods] = useState();
   const [selectedFood, setSelectedFood] = useState(null);
+  const axiosSecure = useAxiosSecure();
 
   useEffect(() => {
-    axios
-      .get(`http://localhost:5000/allFoods?user=${user?.email}`)
+    axiosSecure
+      .get(`allFoods?email=${user?.email}`)
       .then((res) => setMyFoods(res.data));
-  }, [user]);
+  }, [axiosSecure, user]);
 
   const handleEditBtn = (food) => {
     setSelectedFood(food);

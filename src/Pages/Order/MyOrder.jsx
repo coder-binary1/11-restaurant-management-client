@@ -3,16 +3,18 @@ import useAuth from "../../hooks/useAuth";
 import { useEffect, useState } from "react";
 import { Slide, toast } from "react-toastify";
 import MyOrderCard from "./MyOrderCard";
+import useAxiosSecure from "../../hooks/useAxiosSecure";
 
 const MyOrder = () => {
   const { user } = useAuth();
   const [orders, setOrders] = useState();
+  const axiosSecure = useAxiosSecure();
 
   const handleDeleteOrder = (id) => {
     const newOrderList = orders.filter((order) => order._id !== id);
     setOrders(newOrderList);
 
-    axios.delete(`http://localhost:5000/order/${id}`).then((res) => {
+    axiosSecure.delete(`order/${id}`).then((res) => {
       if (res.data.deletedCount) {
         toast.success("Order Deleted", {
           position: "top-center",
@@ -30,10 +32,12 @@ const MyOrder = () => {
   };
 
   useEffect(() => {
-    axios
-      .get(`http://localhost:5000/order?user=${user?.email}`)
+    axiosSecure
+      .get(`order?email=${user?.email}`, {
+        withCredentials: true,
+      })
       .then((res) => setOrders(res.data));
-  }, [user]);
+  }, [axiosSecure, user]);
 
   return (
     <div className="max-w-7xl mx-auto my-10 space-y-4">
