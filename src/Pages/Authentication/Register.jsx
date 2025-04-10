@@ -3,8 +3,7 @@ import GoogleLogin from "./GoogleLogin";
 import useAuth from "../../hooks/useAuth";
 import { useState } from "react";
 import passwordValidation from "./passwordValidation";
-import toast from "daisyui/components/toast";
-import { Slide } from "react-toastify";
+import { Slide, toast } from "react-toastify";
 
 const Register = () => {
   const [error, setError] = useState();

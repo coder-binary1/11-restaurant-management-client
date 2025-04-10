@@ -129,7 +129,7 @@ const Navbar = () => {
               tabIndex={0}
               className="btn bg-transparent border-0 shadow-none"
             >
-              <img className="rounded-full w-10" src={user.photoURL} alt="" />
+              <img className="rounded-full w-10" src={user?.photoURL} alt="" />
             </div>
             <ul
               tabIndex={0}
