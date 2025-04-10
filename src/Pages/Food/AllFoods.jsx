@@ -58,7 +58,7 @@ const AllFoods = () => {
           <SingleFoodCard key={food._id} food={food}></SingleFoodCard>
         ))}
       </div>
-      <div className="flex justify-between mt-10">
+      <div className="flex justify-between mt-10 mx-5">
         <div>
           <select
             onChange={handleItemsPerPage}

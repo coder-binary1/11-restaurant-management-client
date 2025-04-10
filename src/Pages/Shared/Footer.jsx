@@ -1,7 +1,7 @@
 import logo from "../../assets/logo.png";
 const Footer = () => {
   return (
-    <footer className="footer sm:footer-horizontal bg-base-200 text-base-content p-10">
+    <footer className="footer sm:footer-horizontal bg-base-200 text-base-content p-10 justify-around">
       <aside>
         <div className="flex items-center gap-3 mb-2">
           <img className="w-12" src={logo} alt="logo" />
@@ -27,7 +27,7 @@ const Footer = () => {
         <a className="link link-hover">Jobs</a>
         <a className="link link-hover">Press kit</a>
       </nav>
-      <nav>
+      <nav className="">
         <h6 className="footer-title">Legal</h6>
         <a className="link link-hover">Terms of use</a>
         <a className="link link-hover">Privacy policy</a>
