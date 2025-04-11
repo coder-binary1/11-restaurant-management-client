@@ -25,7 +25,7 @@ const TopFoods = () => {
       </div>
       <div className="text-center mt-8">
         <Link to="allFoods">
-          <button className="btn btn-soft btn-lg bg-red-500 hover:bg-black  border-0 text-white transition-all duration-500">
+          <button className="btn btn-soft  bg-red-500 hover:bg-black  border-0 text-white transition-all duration-500">
             All Foods
           </button>
         </Link>

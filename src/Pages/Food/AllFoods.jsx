@@ -58,6 +58,8 @@ const AllFoods = () => {
           <SingleFoodCard key={food._id} food={food}></SingleFoodCard>
         ))}
       </div>
+
+      {/* Pagination */}
       <div className="flex justify-between mt-10 mx-5">
         <div>
           <select
