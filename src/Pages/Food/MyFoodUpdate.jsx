@@ -1,5 +1,7 @@
 import { Slide, toast } from "react-toastify";
 import useAxiosPublic from "../../hooks/useAxiosPublic";
+import { useMutation, useQueryClient } from "@tanstack/react-query";
+import { useEffect, useState } from "react";
 
 const MyFoodUpdate = ({ food }) => {
   const categories = [
@@ -19,13 +21,28 @@ const MyFoodUpdate = ({ food }) => {
     "Hungarian",
   ];
   const axiosPublic = useAxiosPublic();
+  const queryClient = useQueryClient();
+  const [formState, setFormState] = useState({});
 
-  const handleFoodUpdate = (e) => {
+  useEffect(() => {
+    if (food) {
+      setFormState(food);
+    }
+  }, [food]);
+
+  const handleFoodUpdate = async (e) => {
     e.preventDefault();
     const fromData = new FormData(e.target);
     const initialData = Object.fromEntries(fromData.entries());
-    axiosPublic.put(`allFood/${food._id}`, initialData).then((res) => {
-      if (res.data.modifiedCount) {
+    console.log(initialData);
+
+    return await axiosPublic.put(`allFood/${food._id}`, initialData);
+  };
+
+  const mutation = useMutation({
+    mutationFn: handleFoodUpdate,
+    onSuccess: (data) => {
+      if (data.data.modifiedCount) {
         toast.success("Food Updated", {
           position: "top-center",
           autoClose: 2000,
@@ -39,8 +56,9 @@ const MyFoodUpdate = ({ food }) => {
         });
         document.getElementById("modalClose").click();
       }
-    });
-  };
+      queryClient.invalidateQueries({ queryKey: ["myFoods"] });
+    },
+  });
 
   return (
     <>
@@ -54,7 +72,7 @@ const MyFoodUpdate = ({ food }) => {
               ✕
             </button>
           </form>
-          <form onSubmit={handleFoodUpdate}>
+          <form onSubmit={mutation.mutate}>
             <h1 className="text-4xl font-bold text-center mb-5">Update Food</h1>
 
             <fieldset className="fieldset">
@@ -62,7 +80,10 @@ const MyFoodUpdate = ({ food }) => {
               <input
                 type="text"
                 name="foodName"
-                defaultValue={food?.foodName}
+                value={formState.foodName || ""}
+                onChange={(e) =>
+                  setFormState({ ...formState, foodName: e.target.value })
+                }
                 className="input w-full focus:outline-none"
                 placeholder="Food Name"
                 required
@@ -73,7 +94,10 @@ const MyFoodUpdate = ({ food }) => {
               <input
                 type="url"
                 name="foodImage"
-                defaultValue={food?.foodImage}
+                value={formState.foodImage || ""}
+                onChange={(e) =>
+                  setFormState({ ...formState, foodImage: e.target.value })
+                }
                 className="input w-full focus:outline-none"
                 placeholder="Food Image URL"
                 required
@@ -84,7 +108,13 @@ const MyFoodUpdate = ({ food }) => {
                   <input
                     type="text"
                     name="foodOrigin"
-                    defaultValue={food?.foodOrigin}
+                    value={formState.foodOrigin || ""}
+                    onChange={(e) =>
+                      setFormState({
+                        ...formState,
+                        foodOrigin: e.target.value,
+                      })
+                    }
                     className="input w-full focus:outline-none"
                     placeholder="Food Origin"
                     required
@@ -113,7 +143,10 @@ const MyFoodUpdate = ({ food }) => {
                   <input
                     type="number"
                     name="price"
-                    defaultValue={food?.price}
+                    value={formState.price || ""}
+                    onChange={(e) =>
+                      setFormState({ ...formState, price: e.target.value })
+                    }
                     className="input w-full focus:outline-none"
                     placeholder="Food Price"
                     required
@@ -124,7 +157,13 @@ const MyFoodUpdate = ({ food }) => {
                   <input
                     type="number"
                     name="foodQuantity"
-                    defaultValue={food?.foodQuantity}
+                    value={formState.foodQuantity || ""}
+                    onChange={(e) =>
+                      setFormState({
+                        ...formState,
+                        foodQuantity: e.target.value,
+                      })
+                    }
                     className="input w-full focus:outline-none"
                     placeholder="Food Quantity"
                     required
@@ -135,7 +174,13 @@ const MyFoodUpdate = ({ food }) => {
                   <input
                     type="text"
                     name="foodQuantityType"
-                    defaultValue={food?.foodQuantityType}
+                    value={formState.foodQuantityType || ""}
+                    onChange={(e) =>
+                      setFormState({
+                        ...formState,
+                        foodQuantityType: e.target.value,
+                      })
+                    }
                     className="input w-full focus:outline-none"
                     placeholder="Food Quantity Type"
                     required
@@ -145,7 +190,13 @@ const MyFoodUpdate = ({ food }) => {
               <label className="fieldset-label">Description</label>
               <textarea
                 name="description"
-                defaultValue={food?.description}
+                value={formState.description || ""}
+                onChange={(e) =>
+                  setFormState({
+                    ...formState,
+                    description: e.target.value,
+                  })
+                }
                 className="textarea  w-full focus:outline-none"
                 placeholder="Description"
                 rows="6"
@@ -155,6 +206,7 @@ const MyFoodUpdate = ({ food }) => {
           </form>
         </div>
       </dialog>
+      )}
     </>
   );
 };

@@ -13,11 +13,10 @@ const OrderFood = () => {
 
   const food = useLoaderData();
 
-  const foodPrice = Math.ceil(food?.price * 10);
-  const [updatePrice, setUpdatePrice] = useState(foodPrice);
+  const [updatePrice, setUpdatePrice] = useState(food?.price);
 
   const handleUpdatePrice = (value) => {
-    setUpdatePrice(foodPrice * value);
+    setUpdatePrice(food?.price * value);
   };
 
   const handleOrder = (e) => {

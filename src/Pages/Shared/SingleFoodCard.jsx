@@ -3,7 +3,6 @@ import { Link, useLocation } from "react-router-dom";
 const SingleFoodCard = ({ food }) => {
   const location = useLocation();
   const { _id, foodName, foodImage, foodCategory, price, foodQuantity } = food;
-  const foodPrice = Math.ceil(price * 10);
 
   return (
     <div className="card bg-base-100 shadow-sm">
@@ -17,7 +16,7 @@ const SingleFoodCard = ({ food }) => {
         </div>
         <div className="flex justify-between text-base font-medium text-gray-600 ">
           <p>
-            Price: {foodPrice} <span className="font-dancing-script">Taka</span>
+            Price: {price} <span className="font-dancing-script">Taka</span>
           </p>
           {location.pathname === "/allFoods" && (
             <p className="text-right">Available: {foodQuantity}</p>

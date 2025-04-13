@@ -15,7 +15,6 @@ const SingleFood = () => {
     description,
     purchaseCount,
   } = food;
-  const foodPrice = Math.ceil(price * 10);
 
   return (
     <div className="card lg:card-side bg-base-100 shadow-sm max-w-7xl mx-auto my-10">
@@ -34,7 +33,7 @@ const SingleFood = () => {
         </div>
         <div className="text-base text-gray-600 grow space-y-1  mt-2">
           <p>
-            Price: {foodPrice} <span className="font-dancing-script">Taka</span>
+            Price: {price} <span className="font-dancing-script">Taka</span>
           </p>
           <p className={foodQuantity ? "text-success" : "text-error"}>
             Available: {foodQuantity} {foodQuantityType}

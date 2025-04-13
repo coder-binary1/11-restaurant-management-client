@@ -10,8 +10,6 @@ const MyFoodCard = ({ myFood, handleEditBtn }) => {
     price,
   } = myFood;
 
-  const foodPrice = Math.ceil(price * 10);
-
   return (
     <div className="flex gap-3 bg-base-200 shadow-sm rounded-lg">
       <figure className="w-32">
@@ -26,7 +24,7 @@ const MyFoodCard = ({ myFood, handleEditBtn }) => {
         <div className="text-gray-600 space-y-1  mt-2">
           <div className="badge badge-soft badge-error">{foodCategory}</div>
           <p>
-            Price: {foodPrice}
+            Price: {price}
             <span className="font-dancing-script"> Taka</span>
           </p>
         </div>
