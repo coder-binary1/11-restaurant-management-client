@@ -23,6 +23,8 @@ const OrderFood = () => {
     e.preventDefault();
     const formData = new FormData(e.target);
     const initialData = Object.fromEntries(formData.entries());
+    initialData.totalPrice = parseInt(initialData.totalPrice);
+    initialData.totalQuantity = parseInt(initialData.totalQuantity);
     const newData = { ...id, ...initialData };
     const orderQuantity = parseInt(newData.totalQuantity);
     if (food.addedBy.email === newData.buyerEmail) {

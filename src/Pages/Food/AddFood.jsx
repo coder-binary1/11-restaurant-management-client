@@ -26,7 +26,7 @@ const AddFood = () => {
     e.preventDefault();
     const formData = new FormData(e.target);
     const initialData = Object.fromEntries(formData.entries());
-    initialData.foodPrice = parseFloat(initialData.foodPrice);
+    initialData.price = parseFloat(initialData.price);
     initialData.foodQuantity = parseFloat(initialData.foodQuantity);
     const newData = {
       ...initialData,
