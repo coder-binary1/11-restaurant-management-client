@@ -31,6 +31,20 @@
 
 ---
 
+## 🧩 Pages & Structure
+
+- `/` — Home (Banner, Top Foods, Opening Hour,Review)
+- `/allFoods` — All Foods (Searchable, Paginated)
+- `/allFood/:id` — Single Food Details
+- `/orderFood/:id` — Food Order Page (Private)
+- `/gallery` — Static Gallery with Lightbox
+- `/addFood` — Add Food Page (Private)
+- `/myFood` — View & Edit Added Foods (Private)
+- `/myOrder` — View Orders (Private)
+- `/login` & `/register` — Authentication Pages
+
+---
+
 ## 🧭 Layout Structure
 
 ### Navbar
@@ -150,5 +164,3 @@
 ## 📁 Related Repository Links
 
 - **Server Repo**: [GitHub - Server](https://github.com/coder-binary1/11-restaurant-management-server)
-
----
